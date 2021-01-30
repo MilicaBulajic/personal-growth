@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export default function Login() {
+export default function Login({ setToken }) {
   return (
     <div>
       <p>Please Log In</p>
@@ -20,3 +21,7 @@ export default function Login() {
     </div>
   );
 }
+
+Login.propTypes = {
+  setToken: PropTypes.func.isRequired,
+};
