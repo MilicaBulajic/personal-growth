@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { useAuth } from "components/Auth/AuthContext";
+import { useAuth } from "app/Auth/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 
 import Button from "@material-ui/core/Button";

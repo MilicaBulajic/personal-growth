@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { useAuth } from "components/Auth/AuthContext";
+import { useAuth } from "app/Auth/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 
 export default function Signup() {
@@ -37,14 +37,14 @@ export default function Signup() {
       <form onSubmit={handleSubmit}>
         <div id="email">
           <p>Email</p>
-          <input name="emailInput" type="email" ref={emailRef} required />
+          <input name="emailInput" type="email" inputRef={emailRef} required />
         </div>
         <div id="password">
           <p>Password</p>
           <input
             name="passwordInput"
             type="password"
-            ref={passwordRef}
+            inputRef={passwordRef}
             required
           />
         </div>
@@ -53,7 +53,7 @@ export default function Signup() {
           <input
             name="passwordInput"
             type="password"
-            ref={passwordConfirmRef}
+            inputRef={passwordConfirmRef}
             required
           />
         </div>

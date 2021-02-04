@@ -1,17 +1,21 @@
-import { AuthProvider } from "components/Auth/AuthContext";
-import Signup from "components/Auth/Signup";
+import { AuthProvider } from "app/Auth/AuthContext";
+import Signup from "app/Auth/Signup";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Dashboard from "../Auth/Dashboard";
 import Login from "../Auth/Login";
 import PrivateRouter from "../Auth/PrivateRouter";
+import PublicRouter from "../Auth/PublicRouter";
 import ForgotPassword from "../Auth/ForgotPassword";
+import Landing from "../../pages/Landing";
 
 function App() {
   return (
     <Router>
       <AuthProvider>
         <Switch>
+          <PublicRouter restricted={true} component={Landing} path="/" exact />
+
           <PrivateRouter exact path="/" component={Dashboard} />
           <Route path="/signup" component={Signup} />
           <Route path="/login" component={Login} />
