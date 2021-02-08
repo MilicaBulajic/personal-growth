@@ -1,5 +1,9 @@
 import React from "react";
 
 export default function Landing() {
-  return <div>ghdh</div>;
+  return (
+    <div>
+      <p>test</p>
+    </div>
+  );
 }
