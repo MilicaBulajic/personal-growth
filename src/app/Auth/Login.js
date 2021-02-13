@@ -29,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
+  link: {
+    paddingBottom: 20,
+  },
 }));
 
 export default function Login() {
@@ -97,7 +100,7 @@ export default function Login() {
             Log in
           </Button>
           <Grid container justify="flex-end">
-            <Grid item>
+            <Grid item className={classes.link}>
               <Link to="/signup" href="#" variant="body2">
                 Already have an account? Sign in
               </Link>

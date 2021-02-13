@@ -7,22 +7,33 @@ import Login from "../Auth/Login";
 import PrivateRouter from "../Auth/PrivateRouter";
 import PublicRouter from "../Auth/PublicRouter";
 import ForgotPassword from "../Auth/ForgotPassword";
-import Landing from "../../pages/Landing";
+import Home from "../../pages/Home";
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+
+const theme = createMuiTheme({
+  palette: {
+    background: {
+      default: "#e4f0e2",
+    },
+  },
+});
 
 function App() {
   return (
-    <Router>
-      <AuthProvider>
-        <Switch>
-          <PublicRouter restricted={true} component={Landing} path="/" exact />
+    <MuiThemeProvider theme={theme}>
+      <Router>
+        <AuthProvider>
+          <Switch>
+            <PublicRouter restricted={true} component={Home} path="/" exact />
 
-          <PrivateRouter exact path="/" component={Dashboard} />
-          <Route path="/signup" component={Signup} />
-          <Route path="/login" component={Login} />
-          <Route path="/forgot-password" component={ForgotPassword} />
-        </Switch>
-      </AuthProvider>
-    </Router>
+            <PrivateRouter exact path="/" component={Dashboard} />
+            <Route path="/signup" component={Signup} />
+            <Route path="/login" component={Login} />
+            <Route path="/forgot-password" component={ForgotPassword} />
+          </Switch>
+        </AuthProvider>
+      </Router>
+    </MuiThemeProvider>
   );
 }
 

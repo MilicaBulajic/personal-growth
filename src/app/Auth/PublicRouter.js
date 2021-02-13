@@ -13,7 +13,7 @@ export default function PublicRouter({
       {...rest}
       render={(props) => {
         return currentUser && restricted ? (
-          <Redirect to="/landing" />
+          <Redirect to="/dashboard" />
         ) : (
           <Component {...props} />
         );
