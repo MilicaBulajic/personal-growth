@@ -1,4 +1,3 @@
-import { AuthProvider } from "app/Auth/AuthContext";
 import Signup from "app/Auth/Signup";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -13,7 +12,7 @@ import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 const theme = createMuiTheme({
   palette: {
     background: {
-      default: "#e4f0e2",
+      default: "#f4f3f0",
     },
   },
 });
