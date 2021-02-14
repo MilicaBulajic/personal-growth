@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "./AuthContext";
 import { Link, useHistory } from "react-router-dom";
+import Drawer from "../../pages/Drawer";
 
 export default function Dashboard() {
   const [error, setError] = useState("");
@@ -20,7 +21,7 @@ export default function Dashboard() {
 
   return (
     <div>
-      <p>Profile</p>
+      <Drawer />
       <button onClick={handleLogout}>Log out</button>
     </div>
   );

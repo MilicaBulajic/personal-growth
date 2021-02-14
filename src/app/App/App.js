@@ -13,7 +13,7 @@ import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 const theme = createMuiTheme({
   palette: {
     background: {
-      default: "#e4f0e2",
+      default: "#f4f3f0",
     },
   },
 });
@@ -24,7 +24,12 @@ function App() {
       <Router>
         <AuthProvider>
           <Switch>
-            <PublicRouter restricted={true} component={Home} path="/" exact />
+            <PublicRouter
+              restricted={true}
+              component={Home}
+              path="/login"
+              exact
+            />
 
             <PrivateRouter exact path="/" component={Dashboard} />
             <Route path="/signup" component={Signup} />
