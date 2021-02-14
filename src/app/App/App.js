@@ -1,4 +1,3 @@
-import { AuthProvider } from "app/Auth/AuthContext";
 import Signup from "app/Auth/Signup";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
