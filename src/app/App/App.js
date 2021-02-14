@@ -24,7 +24,12 @@ function App() {
       <Router>
         <AuthProvider>
           <Switch>
-            <PublicRouter restricted={true} component={Home} path="/" exact />
+            <PublicRouter
+              restricted={true}
+              component={Home}
+              path="/login"
+              exact
+            />
 
             <PrivateRouter exact path="/" component={Dashboard} />
             <Route path="/signup" component={Signup} />
