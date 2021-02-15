@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
-import { useAuth } from "./AuthContext";
+import { useAuth } from "../../services/AuthContext";
 
 export default function PublicRouter({
   component: Component,

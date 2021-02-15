@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { useAuth } from "./AuthContext";
+import { useAuth } from "../../services/AuthContext";
 import { Link, useHistory } from "react-router-dom";
-import Drawer from "../../pages/Drawer";
+import Drawer from "../../components/Drawer";
 
 export default function Dashboard() {
   const [error, setError] = useState("");
