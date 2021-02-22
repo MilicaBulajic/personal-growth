@@ -14,6 +14,7 @@ import { withRouter } from "react-router-dom";
 const useStyles = makeStyles({
   MuiDrawer: {
     backgroundColor: "#6e5773",
+    width: "190px",
   },
 });
 

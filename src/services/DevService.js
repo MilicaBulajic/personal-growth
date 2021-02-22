@@ -5,15 +5,20 @@ export default function DevService() {
   const [data, setData] = useState({ hits: [] });
 
   useEffect(() => {
+    const CancelToken = axios.CancelToken;
+    const source = CancelToken.source();
     const fetchData = async () => {
       const result = await axios(
-        "https://hn.algolia.com/api/v1/search?query=react"
+        "https://hn.algolia.com/api/v1/search?query=react", { cancelToken: source.token }
       );
 
       setData(result.data);
     };
 
     fetchData();
+    return () => {
+      source.cancel();
+    };
   }, []);
 
   return (

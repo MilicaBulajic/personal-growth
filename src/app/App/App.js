@@ -7,9 +7,11 @@ import PrivateRouter from "../Auth/PrivateRouter";
 import PublicRouter from "../Auth/PublicRouter";
 import ForgotPassword from "../Auth/ForgotPassword";
 import Home from "../../pages/Home";
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { MuiThemeProvider, createMuiTheme, makeStyles } from "@material-ui/core/styles";
 import { AuthProvider } from "services/AuthContext";
 import devNews from "../../pages/devNews";
+import About from "../../pages/About";
+import Drawer from "../../components/Drawer"
 
 const theme = createMuiTheme({
   palette: {
@@ -19,10 +21,14 @@ const theme = createMuiTheme({
   },
 });
 
+
+
 function App() {
+ 
   return (
     <MuiThemeProvider theme={theme}>
       <Router>
+      {window.location.pathname !== '/login' ? <Drawer /> : null}
         <AuthProvider>
           <Switch>
             <PublicRouter
@@ -31,9 +37,9 @@ function App() {
               path="/login"
               exact
             />
-
             <PrivateRouter exact path="/" component={Dashboard} />
             <PrivateRouter exact path="/news" component={devNews} />
+            <PrivateRouter exact path="/about" component={About} />
             <Route path="/signup" component={Signup} />
             <Route path="/login" component={Login} />
             <Route path="/forgot-password" component={ForgotPassword} />
