@@ -12,9 +12,8 @@ import MailIcon from "@material-ui/icons/Mail";
 import { withRouter } from "react-router-dom";
 
 const useStyles = makeStyles({
-  MuiDrawer: {
-    backgroundColor: "#6e5773",
-    width: "190px",
+  drawer: {
+    width: "200px",
   },
 });
 
@@ -39,7 +38,7 @@ const Drawer = (props) => {
     },
   ];
   return (
-    <MUIDrawer variant="permanent" classes={{ paper: classes.MuiDrawer }}>
+    <MUIDrawer variant="permanent" className={classes.drawer}>
       <List>
         {itemsList.map((item, index) => {
           const { text, icon, onClick } = item;

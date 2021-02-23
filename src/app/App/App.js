@@ -13,20 +13,16 @@ import devNews from "../../pages/devNews";
 import About from "../../pages/About";
 import Drawer from "../../components/Drawer"
 
-const theme = createMuiTheme({
-  palette: {
-    background: {
-      default: "#f4f3f0",
-    },
-  },
+
+const useStyles = makeStyles({
+  container: {
+    display: "flex"
+  }
 });
-
-
-
-function App() {
- 
+function App() { 
+  const classes = useStyles();
   return (
-    <MuiThemeProvider theme={theme}>
+    <div className={classes.container}>
       <Router>
       {window.location.pathname !== '/login' ? <Drawer /> : null}
         <AuthProvider>
@@ -46,7 +42,7 @@ function App() {
           </Switch>
         </AuthProvider>
       </Router>
-    </MuiThemeProvider>
+    </div>
   );
 }
 
