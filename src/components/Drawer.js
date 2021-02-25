@@ -24,7 +24,7 @@ const Drawer = (props) => {
     {
       text: "Home",
       icon: <InboxIcon />,
-      onClick: () => history.push("/"),
+      onClick: () => history.push("/dashboard"),
     },
     {
       text: "About",
