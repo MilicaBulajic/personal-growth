@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Redirect } from "react-router-dom";
 import { useAuth } from "../../services/AuthContext";
 import Drawer from "../../components/Drawer"
+import MainMenu from "../../components/MainMenu"
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
@@ -17,6 +18,7 @@ export default function PrivateRouter({ component: Component, ...rest }) {
   const component = props => (
     <div className={classes.container}>
       <Drawer />
+      <MainMenu />
       <Component {...props} />
     </div>
   )

@@ -13,16 +13,11 @@ import devNews from "../../pages/devNews";
 import About from "../../pages/About";
 
 
-const useStyles = makeStyles({
-  container: {
-    display: "flex"
-  }
-});
 
 function App() { 
-  const classes = useStyles();
+
   return (
-    <div className={classes.container}>
+    <div>
       <Router>
         <AuthProvider>
           <Switch>
