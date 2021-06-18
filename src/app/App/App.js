@@ -29,7 +29,8 @@ function App() {
             />
             <PrivateRouter exact path="/dashboard" component={Dashboard} />
             <PrivateRouter exact path="/news" component={devNews} />
-            <PrivateRouter exact path="/about" component={About} />
+            <PrivateRouter exact path="/courses" component={About} />
+            <PrivateRouter exact path="/relax" component={About} />
             <PublicRouter path="/signup" component={Signup} />
             <PublicRouter path="/login" component={Login} />
             <PublicRouter path="/forgot-password" component={ForgotPassword} />

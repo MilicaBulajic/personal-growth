@@ -48,9 +48,6 @@ export default function MainMenu() {
     <div className={classes.root}>
       <AppBar position="static" className={classes.header}>
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            
-          </IconButton>
           <Typography variant="h6" className={classes.title}>
             Personal growth
           </Typography>

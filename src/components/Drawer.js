@@ -7,8 +7,10 @@ import {
   ListItemText,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
+import HomeIcon from '@material-ui/icons/Home';
+import SearchIcon from '@material-ui/icons/Search';
+import BatteryCharging60Icon from '@material-ui/icons/BatteryCharging60';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
 import { withRouter } from "react-router-dom";
 
 const useStyles = makeStyles({
@@ -23,18 +25,23 @@ const Drawer = (props) => {
   const itemsList = [
     {
       text: "Home",
-      icon: <InboxIcon />,
+      icon: <HomeIcon />,
       onClick: () => history.push("/dashboard"),
     },
     {
-      text: "About",
-      icon: <MailIcon />,
-      onClick: () => history.push("/about"),
+      text: "Courses",
+      icon: <MenuBookIcon />,
+      onClick: () => history.push("/courses"),
     },
     {
-      text: "DevNews",
-      icon: <MailIcon />,
+      text: "Newspaper",
+      icon: <SearchIcon />,
       onClick: () => history.push("/news"),
+    },
+    {
+      text: "Relax Time",
+      icon: <BatteryCharging60Icon />,
+      onClick: () => history.push("/relax"),
     },
   ];
   return (

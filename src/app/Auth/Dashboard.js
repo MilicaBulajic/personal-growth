@@ -22,7 +22,7 @@ export default function Dashboard() {
   return (
     <div>
       <Drawer />
-      <button onClick={handleLogout}>Log out</button>
+
     </div>
   );
 }
